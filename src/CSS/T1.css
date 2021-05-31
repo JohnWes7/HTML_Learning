@@ -1,0 +1,86 @@
+a {
+    text-decoration: overline;
+}
+
+/* CSS id 选择器
+id 选择器使用 HTML 元素的 id 属性来选择特定元素。
+
+元素的 id 在页面中是唯一的，因此 id 选择器用于选择一个唯一的元素！
+
+要选择具有特定 id 的元素，请写一个井号（＃），后跟该元素的 id。
+
+实例
+这条 CSS 规则将应用于 id="para1" 的 HTML 元素： */
+/* 注意：id 名称不能以数字开头。 */
+#para1{
+    color: blueviolet;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* CSS 类选择器
+类选择器选择有特定 class 属性的 HTML 元素。
+
+如需选择拥有特定 class 的元素，请写一个句点（.）字符，后面跟类名。
+
+实例
+在此例中，所有带有 class="center" 的 HTML 元素将为红色且居中对齐： */
+p.TestClass{
+    color: cornflowerblue;
+    font-size: 25px;
+}
+
+/* 您还可以指定只有特定的 HTML 元素会受类的影响。
+
+实例
+在这个例子中，只有具有 class="center" 的 <p> 元素会居中对齐： */
+p.red {
+    color: red;
+}
+
+/* HTML 元素也可以引用多个类。
+
+实例
+在这个例子中，<p> 元素将根据 class="center" 和 class="large" 进行样式设置： */
+
+/* 层叠顺序
+当为某个 HTML 元素指定了多个样式时，会使用哪种样式呢？
+
+页面中的所有样式将按照以下规则“层叠”为新的“虚拟”样式表，其中第一优先级最高：
+
+行内样式（在 HTML 元素中）
+外部和内部样式表（在 head 部分）
+浏览器默认样式
+因此，行内样式具有最高优先级，并且将覆盖外部和内部样式以及浏览器默认样式。 */
+
+h2.tomato{
+    background-color: tomato;
+    color: aliceblue;
+}
+h2.frametomato{
+    border-style: solid;
+}
+
+/* 注意：使用 opacity 属性为元素的背景添加透明度时，
+其所有子元素都继承相同的透明度。这可能会使完全透明的元素内的文本难以阅读。 */
+body.colorbg{
+    background-color: lightblue;
+    /* opacity: 0.3; */
+}
+/*测试图像*/
+body.setubg{
+    background-image:url("../../img/Setu.png");
+    background-repeat:no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+img.size{
+    width: 100px;
+    height: 100px;
+}
+
+img.forbidden{
+    content: url("../../img/IMG_3431\(20200311-235006\).JPG");
+}

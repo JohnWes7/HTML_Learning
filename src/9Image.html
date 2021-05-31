@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <style>
+        img.forbid {
+            content: url("../img/IMG_3431\(20200311-235006\).JPG");
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>图片相关</h2>
+
+    <h2>未设置对齐方式的图像：</h2>
+    <p>普通插入图片<img class="forbid" alt="卖队友禁止"></p>
+    <h2>已设置对齐方式的图像：</h2>
+    <p>对齐插入图片<img align="bottom" class="forbid" alt="卖队友禁止"></p>
+    <p>对齐插入图片<img align="middle" class="forbid" alt="卖队友禁止"></p>
+    <p>对齐插入图片<img align="top" class="forbid" alt="卖队友禁止"></p>
+
+    <h2>图片链接</h2>
+    <p><a href="../img/Setu.png"><img class="forbid"></a></p>
+
+    <h2>映射图片</h2>
+    <img src="../img/IMG_3431(20200311-235006).JPG" alt="" usemap="#map" width="200" height="200">
+    <map name="map">
+        <area shape="circle" coords="100,100,10" href="../img/Setu.png" alt="" target="_blank">
+    </map>
+
+    <h2>图像转换味映射图片</h2>
+    <a href="../img/Setu.png"><img src="../img/IMG_3431(20200311-235006).JPG" alt="" ismap width="200" height="200"></a>
+</body>
+
+</html>
