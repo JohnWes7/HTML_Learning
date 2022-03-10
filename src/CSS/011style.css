@@ -1,0 +1,83 @@
+.panel{
+    background-color: antiquewhite;
+    width: 1000px;
+    height: 1000px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.panel img{
+    width: 250px;
+    border: solid 10px whitesmoke;
+    position: absolute;
+}
+
+.photo1{
+    top: 0px;
+    left: 0px;
+    transform: rotate(10deg);
+}
+
+.photo2{
+    top: 0px;
+    left: 330px;
+    transform: rotate(-5deg);
+}
+
+.photo3{
+    top: 0px;
+    left: 660px;
+    transform: rotate(20deg);
+}
+
+.photo4{
+    top: 200px;
+    left: 0px;
+    transform: rotate(-10deg);
+}
+
+.photo5{
+    top: 350px;
+    left: 330px;
+    transform: rotate(-5deg);
+}
+
+.photo6{
+    top: 400px;
+    left: 660px;
+    transform: rotate(10deg);
+}
+
+.photo7{
+    top: 600px;
+    left: 0px;
+    transform: rotate(10deg);
+}
+
+.photo8{
+    top: 700px;
+    left: 330px;
+    transform: rotate(20deg);
+}
+
+.photo9{
+    top: 550px;
+    left: 700px;
+    transform: rotate(-20deg);
+}
+
+.paneltest {
+    width: 500px;
+    height: 400px;
+    background-color: cadetblue;
+    margin: 0px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+}
+
+

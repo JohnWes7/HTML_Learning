@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>009</title>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        .box{
+            width: 800px;
+            height: 300px;
+            background-color: cornflowerblue;
+
+            /* 顺序为上右下左(顺时针) */
+            /* padding: 10px 10px 30px 10px; */
+            /* 第一个上下第二个左右 */
+            padding: 10px 20px;
+            /* 如果填一个值那就上下左右都是10 */
+
+            /* 边框
+            css边框属性允许你指定一个元素边框的样式和颜色
+            solid 定义实现边框 */
+            border: 20px ridge rgb(101, 104, 255);
+
+            /* 外边距
+            外边距是完全看不到 为透明 可以使用auto 百分比*/
+            margin: 0px auto;
+        }
+
+        /* 弹性盒子模型
+        弹性盒子是CSS3的异种新的布局模式
+        CSS3 弹性盒是异种当页面需要适应不同的屏幕大小以及设备时确保元素拥有恰当的行为的布局方式
+        引入弹性盒子布局的目的时提供异种更加有效的方式来对一个容器中的子元素进行排列 对齐 和分配空白空间 */
+        .container{
+            width: 100%;
+            height: 300px;
+            background-color: rgb(185, 185, 185);
+            /* display属性
+            display:flex开启弹性盒属性设置后 子元素默认水平排列 */
+            display: flex;
+            /* flex-direction: row;指定了弹性子元素在父容器中的位置 */
+            flex-direction: row;
+            
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .box1,.box2,.box3{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: bisque;
+            flex: 1;
+        }
+
+        .box2{
+            background-color: crimson;
+            flex: 2;
+        }
+
+        .box3{
+            background-color: green;
+            flex: 1;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 所有的html元素可以看作盒子 在css中 box model 这一术语是用来设计和布局时使用
+    css盒模型本质上是一个盒子 封装周围的html元素 它包括 边距margin 边框border 填充（内边距）padding 实际内容content -->
+    <!-- 内容区域
+    content内容区域包含 width 和 height 两个属性 -->
+    <!-- 块级元素默认看睹是100% 行内元素默认宽度是由内容撑开 不管是块级元素还是行内元素 默认高度都是由内容撑开-->
+    <!-- 内边距
+    css padding 定义元素边框与元素内容之间的空间 机上下左右的内边距 -->
+    
+    <!-- <div class="box"></div> -->
+    <div class="box"></div>
+
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    
+</body>
+</html>

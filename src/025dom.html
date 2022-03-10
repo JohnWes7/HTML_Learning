@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="a">information1</p>
+    <p class="a">information2</p>
+    <p class="b">information3</p>
+    <div id="root"></div>
+    <div class="container" id="d1">1</div>
+    <div class="container" id="d2">2</div>
+
+    <script>
+        // dom只是一个接口规范可以用任何语言实现 所以严格的说 dom不是javascript语法的一部分
+        // 但是dom操作时javascript最常见的任务 离开了dom javascript就无法控制网页
+        // DOM 的最⼩组成单位叫做节点（node），⼤家⽬前可以把节点理解为⻚⾯的元素，包含标签和⽂本内容等
+
+        var ptext = document.getElementsByTagName("p");
+        console.log(ptext);
+        console.log(ptext[0]);
+        ptext[0].innerHTML = "change1";
+
+        var byclassname = document.getElementsByClassName("a")
+        console.log(byclassname);
+
+        var root = document.getElementById("root")
+        console.log(root);
+        root.innerHTML = "haha";
+        root.style.color = "#212121";
+        root.style.fontSize = "20px";
+
+        //如果是类: .名字 id: #名字
+        // document.querySelector⽅法接受⼀个 CSS 选择器作为参数，返回匹配该选择器的元素节点。如果有多个节
+        // 点满⾜匹配条件，则返回第⼀个匹配的节点。如果没有发现匹配的节点，则返回null。
+        // document.querySelectorAll⽅法返回指定元素节点的⼦树中匹配selector的节点集合
+        var div = document.querySelector("#d1");
+        console.log(div);
+        var divs = document.querySelectorAll(".container")
+        console.log(divs);
+
+        //document.createElement⽅法⽤来⽣成元素节点，并返回该节点
+        var np = document.createElement("p");
+        console.log(np);
+        var ntext = document.createTextNode("new text");
+        np.appendChild(ntext);
+        div.appendChild(np);
+        
+        //innerHTML和innerText类似 都可读可写 innerHTML会识别html innerText不会
+        np.innerHTML = "<a href='#'>a link</a>";
+        np.innerText = "<a href='#'>a link</a>";
+    </script>
+</body>
+
+</html>

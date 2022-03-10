@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004</title>
+</head>
+
+<body>
+    <!-- 无序列表表单 type=square/none/disc/circle-->
+    <ul type="square">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+    </ul>
+
+    <!-- 有序列表 type=a/A/1/i/I -->
+    <ol type="I">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+    </ol>
+
+    <!-- 表格 单元格特点: 同行等高，同列等宽
+    合并单元格 水平合并colspan属性 垂直合并rowspan-->
+    <table border="1" cellspacing="0" width="200" height="100">
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td colspan="2">单元格3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">单元格4</td>
+            <td>单元格5</td>
+            <td>单元格6</td>
+            <td>单元格6</td>
+        </tr>
+        <tr>
+            <td>单元格7</td>
+            <td>单元格8</td>
+        </tr>
+    </table>
+
+    <!-- 表单在web网页中用来给访问者填写信息 从而采集客户端信息 让网页可以交互 
+    一个完整的表单包含三个基本组成部分 表单标签 表单域 表单按钮-
+    input标签有不同的类型，对应用户不同的数据 比如文本域/下拉列表/单选框/复选框-->
+    
+    <form action="">
+        <input type="text" name="name">
+        <button>login</button>
+    </form>
+    <form action="">
+        <input type="password" name="pwd">
+    </form>
+    单选框的name可以分组 做到单选
+    <form action="">
+        <input type="radio" name="sex" value="male"><label for="">male</label>
+        <input type="radio" name="sex" value="female"><label for="">female</label>
+    </form>
+    复选框
+    <form action="">
+        <input type="checkbox" name="dream" id="car" value="car"><label for="car">car</label>
+        <input type="checkbox" name="dream" id="house" value="house"><label for="house">house</label>
+        <input type="checkbox" name="dream" id="money" value="money"><label for="money">money</label>
+    </form>
+    选择文件
+    <form action="">
+        <input type="file" name="file">
+    </form>
+
+    label 标签为input元素定义标注
+    lable元素不会向用户呈现任何特殊效果 不过他为鼠标用户改进了可用性
+    如果在lable元素内点击文本，就会触发此控件。就是说当用户选择该标签时浏览器回自动将焦点转到和标签相关的表单控件
+    for属性可以把label绑定倒另一个元素 把for属性的值设置为相关元素的id属性的值
+
+    <form action="">
+        <label for="username">username</label><input type="text" name="username" id="username" placeholder="username"><br>
+        <label for="password">password</label><input type="password" name="password" id="password" placeholder="password">
+    </form>
+
+    <table border="1">
+        <tr>
+            <td colspan="3">basical info</td><td colspan="2">grade</td>
+        </tr>
+        <tr>
+            <td>name</td><td>sex</td><td>majoy</td><td>lesson</td><td>score</td>  
+        </tr>
+        <tr>
+            <td>qiuqiu</td><td>male</td><td rowspan="2">computer</td><td rowspan="3">software design</td><td>68</td>
+        </tr>
+        <tr>
+            <td>nannan</td><td>female</td><td>89</td>
+        </tr>
+        <tr>
+            <td>xiaoming</td><td>male</td><td>accountant</td><td>68</td>
+        </tr>
+        <tr>
+            <td>xiaohong</td><td>male</td><td>construction</td><td>building design</td><td>68</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+.panel{
+    position: relative;
+    top: 200px;
+
+    background-color: antiquewhite;
+    margin: 0px 100px;
+    padding: 10px;
+}
+    
+    
+
+.panel img{
+    width: 250px;
+    height: 100%;
+
+    border: 10px snow solid;
+    padding: 0px;
+}
+
+.photo1{
+    transform: rotate(10deg);
+}
+
+.photo2{
+    transform: rotate(-5deg);
+}
+
+.photo3{
+    transform: rotate(20deg);
+}
+
+.photo4{
+    transform: rotate(-10deg);
+}
+
+.photo5{
+    transform: rotate(-5deg);
+}
+
+.photo6{
+    transform: rotate(10deg);
+}
+
+.photo7{
+    transform: rotate(10deg);
+}
+
+.photo8{
+    transform: rotate(20deg);
+}
+
+.photo9{
+    transform: rotate(-20deg);
+}
+
+.paneltest {
+    background-color: cadetblue;
+    margin: 0px auto;
+}
+
+.cell {
+    background-color: black;
+    position: absolute;
+}
+
+

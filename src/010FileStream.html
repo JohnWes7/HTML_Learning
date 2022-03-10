@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>010</title>
+    <!-- 文档流
+    文档流是文档中可显示对象在排列时所占用的位置/空间
+    列如 块元素自上而下摆放 内联元素从左到右摆放
+    标准流里面限制非常多 导致很多页面效果无法实现
+    1 高矮不齐 底边对齐
+    2 空白折叠现象
+        1 无论多少个空格 换行 tab 都会折叠为一个空格
+        2 如果我们想让img标签之间没有空隙必须紧密相连
+    脱离标准文档流
+    1 浮动
+    2 绝对位置
+    3 固定位置 -->
+    <!-- 浮动可以让元素脱离文档流 向左或者向右摆放
+    浮动的特性
+    可以设置大小
+    可以产生压盖现象
+    浮动的元素相互贴靠 无空隙 -->
+    <style>
+        .test-float {
+            float: right;
+        }
+
+        .box1 {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .image1 {
+            width: 300px;
+            float: left;
+        }
+
+        .image2 {
+            width: 400px;
+        }
+
+        /* 清除浮动 */
+        .ullist {
+            list-style-type: square;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .listcell {
+            float: left;
+            margin: 0px 20px;
+        }
+
+        /* 绝对定位 固定定位 脱离文档流
+        设置定位之后 可以使用四个方向值进行位置调整 left right top buttom 
+        设置定位之后 他是相对于具有定位的父级元素进行位置调整 如果父级元素不存在定位
+        则继续向上逐级寻找 知道顶层文档 */
+        .panel {
+            width: 500px;
+            height: 400px;
+            background-color: cadetblue;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        /* z-index */
+        .z1 {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            top: 0%;
+            left: 0%;
+        }
+
+        .z2 {
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            top: 0%;
+            left: 0%;
+        }
+
+        .z3 {
+            width: 300px;
+            height: 300px;
+            background-color: cornflowerblue;
+            top: 0px;
+            left: 0px;
+        }
+
+        /* display转化行内和块级元素 */
+        .p1 {
+            /* 转化为行内元素 */
+            display: inline;
+        }
+
+        .span1 {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .span2 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .panel1 {
+            background-color: antiquewhite;
+            width: 1000px;
+            height: 720px;
+            margin: 0px auto;
+            position: relative;
+            top: 200px;
+        }
+
+        .panel1 div {
+            background-color: cadetblue;
+            width: 250px;
+            height: 200px;
+            border: solid 10px whitesmoke;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <p>no float</p>
+    <p class="test-float">float</p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <img class="image1" src="../img/Setu.png">
+    <img class="image2" src="../img/Setu.png">
+
+    <ul class="ullist">
+        <li class="listcell">1 Cell Phone</li>
+        <li class="listcell">2 Laptop</li>
+        <li class="listcell">3 Desktop</li>
+        <li class="listcell">4 CPU</li>
+        <li class="listcell">5 RAM</li>
+    </ul>
+    <p>next line</p>
+    <!-- 注意：设置定位之后，他是相对于具有具有定位的⽗级元素进⾏位置调整，如果⽗级元素不存在定位，则继
+    续向上逐级寻找，直到顶层⽂档 -->
+    <div class="panel">
+        <div class="cell"></div>
+    </div>
+
+    <p class="p1">inline1</p>
+    <p class="p1">inline2</p>
+    <span class="span1">block1</span>
+    <span class="span1">block2</span>
+    <span class="span2">block1</span>
+    <span class="span2">block2</span>
+
+    <div class="panel1">
+        <div class="photo1"></div>
+        <div class="photo2"></div>
+        <div class="photo3"></div>
+        <div class="photo4"></div>
+        <div class="photo5"></div>
+    </div>
+</body>
+
+</html>

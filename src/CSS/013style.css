@@ -1,0 +1,182 @@
+.topbar{
+    background-color: rgb(90, 90, 90);
+    height: 40px;
+    line-height: 40px;
+}
+
+.warp{
+    width: 1226px;
+    margin: 0px auto;
+}
+
+.nav-left{
+    float: left;
+}
+
+.nav-right{
+    float: right;
+}
+
+.nav-left li, .nav-right li{
+    float: left;
+}
+
+.nav-left li a, .nav-right li a{
+    color: aliceblue;
+}
+
+.nav-left li span, .nav-right li span{
+    color: aliceblue;
+    margin: 0px 5px;
+}
+
+.second{
+    height: 100px;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.logo{
+    float: left;
+}
+
+.second-logo-1{
+    margin-top: 10px;
+    height: 80px;
+    float: left;
+}
+
+.second-logo-2{
+    margin-top: 10px;
+    height: 80px;
+}
+
+.nav-second-center{
+    float: left;
+}
+
+.nav-second-center ul li{
+    float: left;
+
+    padding: 38px 10px;
+}
+
+.nav-second-center ul li a{
+    color: black;
+}
+
+.search-second{
+    float: right;
+
+    width: 296px;
+    height: 100px;
+}
+
+.search-second input{
+    float: right;
+
+    height: 50px;
+    width: 255px;
+    border: 1px solid #e0e0e0;
+    margin-top: 25px;
+    padding: 0px 15px;
+
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+/* banner */
+.banner{
+    width: 100%;
+    color: aliceblue;
+}
+
+.banner-background{
+    width: 1000px;
+
+    background-image: url("../../img/93666071_[\'ディアンドル+ニーミちゃん\']_p0.png");
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    text-align: left;
+}
+
+.banner-slider{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(105, 101, 101, 0.6);
+}
+
+.banner-slider ul li{
+    padding-left: 30px;
+    line-height: 42px;
+
+    text-align: left;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.banner-slider ul li:hover{
+    background-color: gold;
+    color: black;
+}
+
+/* setu内容 */
+.container{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: rgb(236, 236, 236);
+}
+
+.setubox-right{
+    width: 234px;
+    height: 614px;
+    float: left;
+}
+
+.setubox-right img{
+    width: 234px;
+    height: 614px;
+
+    object-fit: cover;
+}
+
+.setubox-left{
+    width: 992px;
+    height: 614px;
+    float: left;
+}
+
+.setubox-left ul li{
+    float: left;
+    width: 234px;
+    height: 300px;
+    margin-bottom: 14px;
+    margin-left: 14px;
+    background-color: rgb(253, 253, 253);
+}
+
+.setubox-left ul li img{
+    height: 260px;
+    width: 160px;
+    object-fit: contain;
+}
+
+.setubox-left ul li h3{
+    font-size: 14px;
+    color: #212121;
+}
+
+.setubox-left ul li p{
+    font-size: 14px;
+    color: deepskyblue;
+}
+
+.setubox{
+    overflow: hidden;
+    clear: both;
+}

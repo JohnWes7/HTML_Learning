@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>021</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 20, 30, 40, 50, 60];
+        for (let index = 0; index < arr.length; index++) {
+            console.log(arr[index]);
+        }
+
+        var sum = 0;
+        for (let index = 1; index <= 100; index++) {
+            sum += index;
+        }
+        console.log("1~100 sum:" + sum);
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 !== 0) {
+                console.log(i);
+            }
+        }
+
+        for (var i = 1; i < 10; i++) {
+            var line = '';
+            for (var j = 1; j <= i; j++) {
+                line = line + j + "*" + i + "=" + (i * j) + " ";
+            }
+            document.write("<p>" + line + "</p>")
+        }
+
+        sum = 0
+        for (var i = 1; i <= 1000; i++) {
+            sum += i;
+        }
+        document.write("<p>" + sum + "</p>")
+
+        for (let i = 1; i <= 1000; i++) {
+            if (i % 2 === 1) {
+                document.write(i + " ");
+            }
+        }
+    </script>
+</body>
+
+</html>

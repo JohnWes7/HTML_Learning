@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>023</title>
+</head>
+
+<body>
+    <script>
+        function print() {
+            console.log("print : hello");
+        }
+
+        print();
+
+        var print1 = function () {
+            console.log("print1 : Hello");
+        }
+
+        print1();
+        console.log(typeof print1);
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        console.log(add(1, 5))
+        //如果没有返回值则返回undefined
+        console.log(print())
+
+        function iife(){
+            console.log("iife");
+        }
+
+        iife();
+
+        //外部为全局变量
+        //JS语言中 ES5版本 作用域是函数级作用域不管花括号只有函数能隔开作用域
+        var num1 = 10;
+
+        function test_num1(){
+            console.log(num1);
+        }
+    </script>
+</body>
+
+</html>

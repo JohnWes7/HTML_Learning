@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>024</title>
+</head>
+
+<body>
+    <script>
+        console.log(Math.PI);
+        console.log(Math.E);
+
+        //绝对值
+        console.log(Math.abs(-5));  //5
+
+        //向上取整
+        console.log(Math.ceil(10.3));    //11
+        //向下取整
+        console.log(Math.floor(10.6));   //10
+        //四舍五入
+        console.log(Math.round(2.5)); //3
+
+        //最大值最小值
+        console.log(Math.max(1, 5, 6, 8, 3, 9)); //9
+        console.log(Math.min(1, 5, 6, 8, 3, 9)); //1
+
+
+        //random随机数
+        console.log(Math.random()); //随机生成一个[0,1)的随机数
+
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function random_int(min, max) {
+            return Math.round(random(min, max));
+        }
+
+        console.log(random(1, 100));
+        console.log(random_int(1, 100));
+
+        //Date
+        console.log(Date());
+        console.log(new Date());
+
+        console.log(new Date('2019-6-7'));
+        console.log(new Date('2019/6/8'));
+
+        var date1 = new Date('2019/6/7');
+        var date2 = new Date();
+        console.log(date2-date1); //返回日期间隔的毫秒数
+
+        //时间戳
+        //时间戳是指格林威治时间1970年01月01日00时00分00秒
+        //（北京时间1970年01月01日08时00分00秒）
+        //起到现在的总秒数
+        var date3 = new Date();
+        console.log(date3.getTime());
+        //getFullYear获取年份 getyear()获取距离1900的年数
+        console.log(date3.getFullYear());
+        //getMonth获取月份 0表示1月 11表示12月
+        console.log(date3.getMonth());
+        //getDate获取日
+        console.log(date3.getDate());
+        //getDay获取星期
+        console.log(date3.getDay());
+        //getHours获取小时
+        console.log(date3.getHours());
+        //getMinutes获取分钟
+        console.log(date3.getMinutes());
+        //getSeconds获取秒数
+        console.log(date3.getSeconds());
+        //getMilliseconds获取毫秒数
+        console.log(date3.getMilliseconds());
+        
+        var line = "<p>" + date3.getFullYear() + "年" + (date3.getMonth() + 1) + "月" + date3.getDate() + "日 星期" + date3.getDay() + "</p>";
+        document.write(line);
+        document.write("<p>" + date3.getHours() + ":" + date3.getMinutes() + ":" + date3.getSeconds());
+    </script>
+</body>
+
+</html>

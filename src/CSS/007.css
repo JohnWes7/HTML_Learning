@@ -1,0 +1,46 @@
+/* css背景属性 */
+    /*
+    颜色值 单词：red 十六进制#000000 颜色通道 rgb(255,255,255) rgba(255,255,255,1)
+    background-color: aqua;
+
+    background-image: none;
+
+    背景图片填充必须线指定bg image
+    repeat-x 水平方向平铺
+    repeat-y 垂直方向平铺
+    no-repeat 不平铺
+    background-repeat: initial;
+
+    背景图片大小必须先指定image
+    percentage 百分比
+    cover 此时回保持图像的纵横比并将图像缩放成完全覆盖背景定位的最大最小
+    contain 此时回保持图像的纵横比并将图像缩放成适合背景定位区域的最大最小
+    background-size: contain;
+
+    背景图片的起始位置
+    该属性设置背景图像的起始位置默认值时0% 0%
+    left top
+    left center
+    left bottom
+    right top
+    right center
+    right bottom
+    center top
+    center center
+    center bottom
+    
+    background-position: 0 0; */
+
+div{
+    width: 1920px;
+    height: 1080px;
+    /* background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("../../img/Setu.png");
+    background-repeat: no-repeat;
+    background-position: center center; */
+    /* background-size: contain; */
+    background: url("../../img/Setu.png") no-repeat right bottom/contain rgba(0, 0, 0, 0.5);
+    
+}
+
+

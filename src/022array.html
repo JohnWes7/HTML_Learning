@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>022</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5, 6];
+        console.log(typeof arr);
+        console.log(Array.isArray(arr));
+        console.log(arr.length);
+
+        console.log(arr);
+        arr.push(10);
+        console.log(arr);
+        arr.pop();
+        console.log(arr);
+
+        //join 
+        //将所有的数组成员连接为一个字符串返回 如果不提供参数 默认用逗号分隔
+        var str = arr.join('|');
+        console.log(str);
+
+        //concat 返回值是何必完的数组
+        var arr2 = [10, 20, 30];
+        console.log(arr.concat(arr2));
+
+        //indexof 返回元素的下标 不存在返回-1
+        num1 = 7;
+        console.log((arr.indexOf(num1) > -1 ? "存在num1" : "不存在"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>026</title>
+
+    <style>
+        #test_box{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html时间处理 -->
+    <!-- 书写简单 但是文件不分离 可复用性差 -->
+    <button onclick="test_onclick()">button</button>
+
+    <!-- dom0级事件处理 -->
+    <!-- 代码分离可复用性高 -->
+    <!-- 但是事件会被覆盖 -->
+    <button id="btn2">test dom0</button>
+
+    <!-- dom2级事件处理 -->
+    <button id="btn3">test dom2</button>
+    <button id="btn4">cancle te</button>
+
+    
+    <!-- 测试所有事件 -->
+    <div id="test_box"></div>
+
+    <script>
+        function test_onclick() {
+            console.log("button click");
+        }
+
+        var btn2 = document.getElementById("btn2");
+        console.log(btn2);
+        btn2.onclick = function () {
+            console.log("dom0 button click1");
+        };
+        btn2.onclick = function () {
+            console.log("dom0 button click2");
+        };//只会触发click2
+
+        var btn3 = document.getElementById("btn3");
+        function dom2test1() {
+            console.log("dom2 button click1");
+        }
+        function dom2test2() {
+            console.log("dom2 button click2");
+        }
+        btn3.addEventListener("click", dom2test1);
+        btn3.addEventListener("click", dom2test2);//两个都会触发不会覆盖
+
+        // 取消事件 点击btn4取消btn3的事件2
+        var btn4 = document.getElementById("btn4");
+        function cancle_btn3_event() {
+            btn3.removeEventListener("click", dom2test2);
+        }
+        btn4.addEventListener("click", cancle_btn3_event);
+
+        /**
+         * 事件触发类型 
+         * click    点击触发
+         * dblclick 双击触发
+         * mousedown    按下鼠标触发
+         * mouseup  抬起鼠标时触发
+         * mousemove    当鼠标在一个节点内部移动时触发 鼠标持续移动时 该事件会连续触发
+         * 为了避免性能问题 建议对该事件的监听函数做一些限定 比如限定一段时间内只能运行一次
+         * mouseover    当鼠标进入一个节点时触发
+         * mouseout 鼠标离开一个节点时触发
+        */
+
+        var div = document.getElementById("test_box");
+        div.addEventListener("click", function(event){
+            console.log("on click");
+            console.log(event);
+            event.target.innerHTML = "done";
+        });
+        div.addEventListener("dblclick", function(){
+            console.log("on double click");
+        });
+        div.addEventListener("mouseup", function(){
+            console.log("on mouse up");
+        });
+        div.addEventListener("mousemove", function(){
+            console.log("on mouse move");
+        });
+        div.addEventListener("mouseover", function(){
+            console.log("on mouse over");
+        });
+        div.addEventListener("mouseout", function(){
+            console.log("on mouse out");
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 数值类型（number）：整数小数负数
+        var num1 = 10;
+        // 字符串类型
+        var name = 'johnwest';
+        var sex = 'male';
+        // bool 类型
+        var flag1 = true;
+        var flag2 = false;
+        //js中两个特殊的值 undefined null
+        var num4;
+        console.log(num4); // undfined
+        
+        //对象 合成类型 complex type
+        //狭义的对象 数组 函数
+        //对象object是js语言核心
+        //对象是一组键值对的集合 是一种无序的复合数据集合
+        var obj = {
+            name:"johnwest",
+            age:20,
+            flag:true,
+            sex:"male"
+        };
+
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj.flag);
+        console.log(obj);
+
+        //数组array 一组值 位置编号 用[]表示
+        //数组里面可以是任意值
+        var arr = [10,"hello",30,true];
+        console.log(arr[3])
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+            console.log(element);
+        }
+
+        //函数
+        function test1() {
+            //typeof
+            var str = "100";
+            var num = 500;
+            var bool =  true;
+            var dict = {};
+            var arr = [];
+
+            console.log(typeof str);
+            console.log(typeof num);
+            console.log(typeof boolen);
+            console.log(typeof dict);
+            console.log(typeof arr);
+            console.log(typeof undefined)   //undefined
+            console.log(typeof null)    //object
+        }
+
+        test1();
+    </script>
+</body>
+</html>
