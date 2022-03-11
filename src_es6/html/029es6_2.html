@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>029</title>
+
+    <script src="../js/es6/029import.js" type="module"></script>
+</head>
+<body>
+    <script>
+        var sex = "male";
+
+        //属性简洁表示法 直接写入变量或者函数作为对象的属性和方法
+        var obj = {
+            name:"johnwest",
+            age:20,
+            sex
+        }
+
+        console.log(obj);
+
+        //箭头函数lambda
+        var fn = (name, age) => {
+            if(name === "j"){
+                return age;
+            }
+        };
+
+        var arr = [1,20,30,40,50];
+        arr.map((item, index) => {
+            console.log(item + " " + index);
+        });
+
+    </script>
+</body>
+</html>
