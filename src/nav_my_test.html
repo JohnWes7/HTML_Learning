@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav test</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .warp {
+            height: auto;
+            width: 1000px;
+            margin: 0px auto;
+        }
+
+        .nav {
+            background-color: cadetblue;
+            height: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            text-align: center;
+        }
+
+        .nav a:hover {
+            background-color: cornflowerblue;
+        }
+
+        .nav>li>a {
+            line-height: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .nav>li {
+            float: left;
+            width: 100px;
+            height: 50px;
+        }
+
+        .sub-ul1 {
+            height: 33px;
+            width: 500px;
+        }
+
+        .sub-ul1 li {
+            float: left;
+            background-color: burlywood;
+            width: 100px;
+            height: 33px;
+        }
+
+        .sub-ul1 a {
+            line-height: 33px;
+        }
+
+        .sub-ul2 li {
+            background-color: burlywood;
+            float: none;
+            width: 100px;
+            height: 33px;
+        }
+
+        .sub-ul2 a {
+            line-height: 33px;
+        }
+
+        .nav ul {
+            visibility: hidden;
+        }
+
+        /* 如果有鼠标放在nav的li上 就把ul现实 */
+        .nav>li:hover>ul {
+            visibility: visible;
+        }
+
+        .header{
+            background-color: cadetblue;
+        }
+
+        .left {
+            float: left;
+            width: 150px;
+            height: 1000px;
+            padding: 20px 0px;
+            background-color: darkcyan;
+        }
+
+        .left a{
+            height: 50px;
+            line-height: 25px;
+        }
+
+        .left-nav ul a{
+            height: 50px;
+            line-height: 50px;
+            padding: 0px 10px;
+        }
+
+        .left a:hover{
+            background-color: aqua;
+        }
+
+        .left-nav li{
+            position: relative;
+        }
+
+        .left-nav ul{
+            position:absolute;
+            left: 150px;
+            top: 0px;
+            background-color: cadetblue;
+            visibility: hidden;
+        }
+
+        .left-nav>li:hover ul{
+            visibility: visible;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="warp">
+            <ul class="nav">
+                <li><a href="#">首页</a></li>
+                <li>
+                    <a href="#">图鉴1</a>
+                    <ul class="sub-ul1">
+                        <li><a href="#">CV</a></li>
+                        <li><a href="#">BB</a></li>
+                        <li><a href="#">DD</a></li>
+                        <li><a href="#">CA</a></li>
+                        <li><a href="#">CL</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">图鉴2</a>
+                    <ul class="sub-ul2">
+                        <li><a href="#">CV</a></li>
+                        <li><a href="#">BB</a></li>
+                        <li><a href="#">DD</a></li>
+                        <li><a href="#">CA</a></li>
+                        <li><a href="#">CL</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="left">
+        <ul class="left-nav">
+            <li>
+                <a href="#">Risk of Rain 2</a>
+                <ul>
+                    <a href="#">items</a>
+                    <a href="#">monsters</a>
+                    <a href="#">survivorsssssssssssssss</a>
+                </ul>
+            </li>
+            <li>
+                <a href="#">FORZA Horizon 5</a>
+            </li>
+            <li>
+                <a href="#">APEX</a>
+            </li>
+            <li>
+                <a href="#">Cube Escape Collection</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

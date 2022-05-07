@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>css制作二级导航</title>
+
+    <style type="text/css">
+        * {
+            padding: 0px;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #nav {
+            width: 100%;
+            height: 50px;
+            background-color: #999;
+        }
+
+        #nav li {
+            float: left;
+            width: 100px;
+            height: 50px;
+        }
+
+        #nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            display: block;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        #nav a:hover {
+            background-color: #f00;
+        }
+
+        #nav ul.sub {
+            background-color: #999;
+            width: 100px;
+            /*想让二级导航横着排列，改这里的大小*/
+            height: 300px;
+            border: solid 0px;
+        }
+
+        #nav ul.test {
+            background-color: #ccc;
+            width: 300px;
+            height: 50px;
+        }
+
+        #nav ul ul {
+            visibility: hidden;
+        }
+
+        /*这是关键*/
+        #nav li:hover ul {
+            visibility: visible;
+        }
+
+        
+
+        /*这是关键*/
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+
+            <li><a href="#">你好</a>
+                <ul class="sub test">
+                    <li><a href="#">世界</a></li>
+
+                    <li><a href="#">非常</a></li>
+
+                    <li><a href="#">美好</a></li>
+
+                    <li><a href="#">希望</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">我好</a>
+                <ul class="sub">
+                    <li><a href="#">健康</a></li>
+
+                    <li><a href="#">幸福</a></li>
+
+                    <li><a href="#">美好</a></li>
+
+                    <li><a href="#">希望</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">大家好</a>
+                <ul class="sub">
+                    <li><a href="#">健康</a></li>
+
+                    <li><a href="#">幸福</a></li>
+
+                    <li><a href="#">美好</a></li>
+
+                    <li><a href="#">希望</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">憧憬集团</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
